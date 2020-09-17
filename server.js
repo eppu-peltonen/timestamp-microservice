@@ -11,7 +11,9 @@ app.get("/api/timestamp/:date_string", (req, res) => {
   
   var dateString = req.params.date_string;
   var dateObject = {};
+ 
   
+  // TODO: regex check etc. 
   // Normal date string
   if (dateString.includes("-") === true) {
     dateObject.unix = new Date(dateString).getTime();
